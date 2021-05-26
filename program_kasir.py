@@ -6,6 +6,37 @@ password_json = open("Data/password.json","r")
 jsondata2 = password_json.read()
 password_py = json.loads(jsondata2)
 
+# Fungsi main menu
+def mainMenu():
+    # Menampilkan main menu
+    print("")
+    print("-"*10,"Selamat Datang di Main Menu","-"*10)
+    print("\nMenu Program :")
+    print("1. Program Kasir")
+    print("2. Menu Stok")
+    print("3. Reset Username dan Password")
+    print("4. Grafik Penjualan")
+    print("5. Keluar Program\n")
+    x = input("Pilih menu :")
+    if x == "1":
+        programHitung()
+    elif x == "2":
+        pass
+        # fungsimenu2() (belum ada)
+    elif x == "3":
+        pass
+        # fungsimenu3() (belum ada)
+    elif x == "4":
+        pass
+        # Import file grafik (belum ada)
+    else:
+        print("")
+        print("="*50)
+        txt = "Program Selesai"
+        print(txt.center(50))
+        print("="*50)
+        sys.exit()
+
 # Fungsi untuk login
 def login():
     i = 0 # Percobaan ke
