@@ -6,6 +6,22 @@ password_json = open("Data/password.json","r")
 jsondata2 = password_json.read()
 password_py = json.loads(jsondata2)
 
+# Fungsi untuk menampilkan data barang
+def display():
+    print("")
+    x = "List Barang"
+    print(x.center(50))
+    print("-"*50)
+    print("ID   Nama Barang   Harga   Stok")
+    print("-"*50)
+    # Looping untuk print stok barang
+    i = 0
+    n = len(listbarang_py["list"])
+    while i < n:
+        print(f"({listbarang_py['list'][i]['ID']})   ({listbarang_py['list'][i]['Nama']})   ({listbarang_py['list'][i]['Harga']})   ({listbarang_py['list'][i]['Stok']})")
+        i += 1
+    print("")
+    
 # Fungsi main menu
 def mainMenu():
     # Menampilkan main menu
