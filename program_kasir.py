@@ -11,6 +11,13 @@ password_json = open("Data/password.json","r")
 jsondata2 = password_json.read()
 password_py = json.loads(jsondata2)
 
+# define list untuk program hitung
+Id = []
+harga_total = []
+barang_total = []
+jumlah_barang = []
+list_belanja = [barang_total,jumlah_barang]
+
 # Fungsi untuk menampilkan data barang
 def display():
     print("")
@@ -27,6 +34,77 @@ def display():
         i += 1
     print("")
     
+# Fungsi untuk menambahkan barang yang ingin dibeli
+def programHitung():
+    print("")
+    print("-"*10,"Selamat Datang di Program Hitung","-"*10)
+    display()
+    # Looping untuk kasir
+    lagi = input("Apakah ingin memasukkan barang? (y/n) :")
+    while lagi == "y":
+        inputBarang = int(input("Masukkan ID Barang :"))
+
+        # Antisipasi transaksi gagal dengan memasukkan ID barang terpilih ke list Dummy
+        Id.append(inputBarang)
+
+        # Append nama barang ke list barang_total
+        barang_total.append(listbarang_py["list"][inputBarang]["Nama"])
+
+        # Append jumlah barang ke list jumlah_barang
+        inputJumlah = int(input("Masukkan Jumlah Barang :"))
+        jumlah_barang.append(inputJumlah)
+
+        # Append harga ke list harga_total
+        harga = listbarang_py["list"][inputBarang]["Harga"] * inputJumlah
+        harga_total.append(harga)
+
+        # cek apakah stok barang yg dipilih mencukupi
+        if (listbarang_py["list"][inputBarang]["Stok"] - inputJumlah) < 0:
+
+            print("\nStok barang yang anda pilih habis!")
+
+            jumlah_barang.pop() # Update list jumlah belanjaan menjadi kosong
+            barang_total.pop()
+
+            x = input("\nTekan enter untuk ulangi :")
+
+            if x == "":
+                programHitung()
+            else:
+                print("Error!")
+                print("")
+                print("="*50)
+                txt = "Program Selesai"
+                print(txt.center(50))
+                print("="*50)
+                sys.exit()
+
+        # Tanya untuk looping
+        lagi = input("Apakah ingin tambah barang? (y/n) :")
+    
+    if lagi == "n" and len(jumlah_barang) == 0:
+        print("\nError!\nList Belanja Kosong")
+        print("")
+        print("="*50)
+        txt = "Program Selesai"
+        print(txt.center(50))
+        print("="*50)
+        sys.exit() 
+    elif lagi == "n":
+        struk() # Ketika selesai memilih langsung memanggil fungsi struk
+    else:
+        print("\nSalah input!")
+        x = input("\nTekan enter untuk ulangi (List Belanjaan Tidak Hilang!):")
+        if x == "":
+            programHitung()
+        else:
+            print("")
+            print("="*50)
+            txt = "Program Selesai"
+            print(txt.center(50))
+            print("="*50)
+            sys.exit()
+            
 # Fungsi main menu
 def mainMenu():
     # Menampilkan main menu
