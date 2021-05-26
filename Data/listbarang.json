@@ -1,0 +1,130 @@
+{
+    "list": [
+        {
+            "ID": 0,
+            "Nama": "Ip X 64",
+            "Harga": 11000000,
+            "Stok": 2,
+            "Jual": 1
+        },
+        {
+            "ID": 1,
+            "Nama": "Ip X 256",
+            "Harga": 14000000,
+            "Stok": 8,
+            "Jual": 0
+        },
+        {
+            "ID": 2,
+            "Nama": "Ip Xs 512",
+            "Harga": 17000000,
+            "Stok": 6,
+            "Jual": 0
+        },
+        {
+            "ID": 3,
+            "Nama": "Ip XsM 512",
+            "Harga": 18000000,
+            "Stok": 11,
+            "Jual": 0
+        },
+        {
+            "ID": 4,
+            "Nama": "Ip Xr 128",
+            "Harga": 8800000,
+            "Stok": 5,
+            "Jual": 0
+        },
+        {
+            "ID": 5,
+            "Nama": "Ip 11 128",
+            "Harga": 12500000,
+            "Stok": 5,
+            "Jual": 0
+        },
+        {
+            "ID": 6,
+            "Nama": "Ip 11 P 256",
+            "Harga": 19500000,
+            "Stok": 10,
+            "Jual": 0
+        },
+        {
+            "ID": 7,
+            "Nama": "Ip 11 PM 256",
+            "Harga": 21500000,
+            "Stok": 27,
+            "Jual": 2
+        },
+        {
+            "ID": 8,
+            "Nama": "IP SE 128",
+            "Harga": 7800000,
+            "Stok": 3,
+            "Jual": 2
+        },
+        {
+            "ID": 9,
+            "Nama": "IP 12 128",
+            "Harga": 14500000,
+            "Stok": 8,
+            "Jual": 6
+        },
+        {
+            "ID": 10,
+            "Nama": "IP 12 Mini 128",
+            "Harga": 12500000,
+            "Stok": 2,
+            "Jual": 0
+        },
+        {
+            "ID": 11,
+            "Nama": "IP 12 P 256",
+            "Harga": 20000000,
+            "Stok": 1,
+            "Jual": 0
+        },
+        {
+            "ID": 12,
+            "Nama": "IP 12 PM 256",
+            "Harga": 22000000,
+            "Stok": 2,
+            "Jual": 0
+        },
+        {
+            "ID": 13,
+            "Nama": "Airpods P",
+            "Harga": 3500000,
+            "Stok": 9,
+            "Jual": 1
+        },
+        {
+            "ID": 14,
+            "Nama": "Airpods 2",
+            "Harga": 2700000,
+            "Stok": 10,
+            "Jual": 0
+        },
+        {
+            "ID": 15,
+            "Nama": "Watch SE 44",
+            "Harga": 6000000,
+            "Stok": 10,
+            "Jual": 0
+        },
+        {
+            "ID": 16,
+            "Nama": "Watch 6 44",
+            "Harga": 7500000,
+            "Stok": 10,
+            "Jual": 0
+        },
+        {
+            "ID": 17,
+            "Nama": "Watch 5 44",
+            "Harga": 7800000,
+            "Stok": 9,
+            "Jual": 1
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+
+Tanggal : 2021-05-25 08:24:17.766749
+Nama : Hafiz
+Umur : 18
+Gender : L
+Alamat : Magelang
+Barang yang Dibeli : [['Ip X 64'], [1]]
+Keterangan : Cash
+DP : 0
+Sisa : 0
