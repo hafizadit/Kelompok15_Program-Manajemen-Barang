@@ -2,6 +2,11 @@ import datetime
 import sys
 import json
 
+# Open and loads Json File
+listbarang_json = open("Data/listbarang.json","r")
+jsondata = listbarang_json.read()
+listbarang_py = json.loads(jsondata)
+
 password_json = open("Data/password.json","r")
 jsondata2 = password_json.read()
 password_py = json.loads(jsondata2)
