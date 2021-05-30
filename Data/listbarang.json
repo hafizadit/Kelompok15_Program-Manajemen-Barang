@@ -4,8 +4,8 @@
             "ID": 0,
             "Nama": "Ip X 64",
             "Harga": 11000000,
-            "Stok": 2,
-            "Jual": 1
+            "Stok": 1,
+            "Jual": 2
         },
         {
             "ID": 1,
@@ -72,7 +72,7 @@
         },
         {
             "ID": 10,
-            "Nama": "IP 12 Mini 128",
+            "Nama": "IP 12 Mn 128",
             "Harga": 12500000,
             "Stok": 2,
             "Jual": 0
