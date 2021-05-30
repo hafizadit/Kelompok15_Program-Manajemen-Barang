@@ -1,2 +1,3 @@
 
 2021-05-25 08:24:17.766749 Transaksi Penjualan : [['Ip X 64'], [1]], Metode 1
+2021-05-30 12:59:33.886688 Transaksi Penjualan : [['Ip X 64'], [1]], Metode 1

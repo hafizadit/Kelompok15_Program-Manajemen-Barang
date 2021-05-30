@@ -26,15 +26,15 @@ data_pembeli_txt = open("Data/data_pembeli.txt","a")
 def display():
     print("")
     x = "List Barang"
-    print(x.center(50))
-    print("-"*50)
-    print("ID   Nama Barang   Harga   Stok")
-    print("-"*50)
+    print(x.center(55))
+    print("-"*55)
+    print("ID\tNama Barang\t\tHarga\t\tStok")
+    print("-"*55)
     # Looping untuk print stok barang
     i = 0
     n = len(listbarang_py["list"])
     while i < n:
-        print(f"({listbarang_py['list'][i]['ID']})   ({listbarang_py['list'][i]['Nama']})   ({listbarang_py['list'][i]['Harga']})   ({listbarang_py['list'][i]['Stok']})")
+        print(f"({listbarang_py['list'][i]['ID']})\t({listbarang_py['list'][i]['Nama']})\t\tRp{listbarang_py['list'][i]['Harga']}\t({listbarang_py['list'][i]['Stok']})")
         i += 1
     print("")
 
@@ -55,7 +55,7 @@ Pilih (1/2)
     bAdmin = 2500
     pajak = 0.025 * sum(harga_total)
     harga = bAdmin + pajak + sum(harga_total)
-    print("\nTotal Harga Barang Belanjaan anda adalah (Belum Bunga):",harga)
+    print(f"\nTotal Harga Barang Belanjaan anda adalah (Belum Bunga): Rp{harga}")
 
     if int(metode) == 1:
         keterangan = "Cash"
@@ -65,7 +65,7 @@ Pilih (1/2)
     elif int(metode) == 2:
         # Antisipasi input bukan angka
         try:
-            angsuran = input("Masukkan berapa bulan angsuran\n6 (bunga 4%)\n12 (bunga 6%)\n24 (bunga 10%)\n>> ")
+            angsuran = input("Masukkan berapa bulan angsuran\n1. 6 (bunga 4%)\n2. 12 (bunga 6%)\n3. 24 (bunga 10%)\n(1/2/3)\n>> ")
             angsuran = int(angsuran)
         except ValueError:
             print("\nError!\nInput Bukan Angka")
@@ -76,11 +76,11 @@ Pilih (1/2)
             print("="*50)
             sys.exit()
 
-        if angsuran == 6:
+        if angsuran == 1:
             bunga = 0.04
-        elif angsuran == 12:
+        elif angsuran == 2:
             bunga = 0.06
-        elif angsuran == 24:
+        elif angsuran == 3:
             bunga = 0.1
         else: # Jika input angsuran tidak tersedia
             print("\nError!\nJumlah Angsuran Tidak Terdaftar")
@@ -107,7 +107,7 @@ Pilih (1/2)
         harga = harga + (harga * bunga)
         sisa = harga - dp
         cicilan = sisa/angsuran
-        keterangan = f"Kredit Angsuran\n{angsuran} bulan\nCicilan bunga {bunga*100} %\n{round(cicilan,2)} ({angsuran}x)"
+        keterangan = f"Kredit Angsuran\n{angsuran} bulan\nCicilan bunga {bunga*100}%\nRp{round(cicilan,2)} ({angsuran}x)"
     else:
         print("\nInput anda salah!\n")
         inp = input("Tekan enter untuk ulangi: ")
@@ -123,22 +123,7 @@ Pilih (1/2)
             print("="*50)
             sys.exit()
 
-    # Input Data Pembeli
-    try:
-        nama_pembeli = input("\nMasukkan nama pembeli : ")
-        umur_pembeli = int(input("Masukkan umur pembeli : "))
-        sex_pembeli = input("Masukkan gender pembeli : ")
-        alamat_pembeli = input("Masukkan alamat pembeli : ")
-    except ValueError:
-        print("\nError! Input Umur Salah")
-        print("")
-        print("="*50)
-        txt = "Program Selesai"
-        print(txt.center(50))
-        print("="*50)
-        sys.exit()
-    
-    # Mendeteksi adanya kemungkinan transaksi gagal
+    # Mendeteksi adanya kemungkinan transaksi gagal karna uang kurang
     if int(metode) == 1 and harga > bayar:
         print("\nUang anda kurang!")
         x = input("\nTekan enter untuk ulangi :")
@@ -154,6 +139,21 @@ Pilih (1/2)
             print("="*50)
             sys.exit()
 
+    # Input Data Pembeli
+    try:
+        nama_pembeli = input("\nMasukkan nama pembeli : ")
+        umur_pembeli = int(input("Masukkan umur pembeli : "))
+        sex_pembeli = input("Masukkan gender pembeli (L/P): ")
+        alamat_pembeli = input("Masukkan alamat pembeli : ")
+    except ValueError:
+        print("\nError! Input Umur Salah")
+        print("")
+        print("="*50)
+        txt = "Program Selesai"
+        print(txt.center(50))
+        print("="*50)
+        sys.exit()
+    
     Kembali = bayar - harga
 
     # Update data_pembeli.txt
@@ -180,18 +180,18 @@ Pilih (1/2)
     l = len(jumlah_barang)
     i = 0
     while i < l:
-        print("{0}\t({1})\t{2}\t{3}".format(barang_total[i],
+        print("{0}\t({1})\tRp{2}\tRp{3}".format(barang_total[i],
         jumlah_barang[i],
         harga_total[i],
         harga_total[i]*jumlah_barang[i]))
         i += 1
     print("\t\t\t\t------------------")
-    print("\t\t\tBiaya Admin :", bAdmin)
-    print("\t\t\tPajak       :", pajak)
-    print("\t\t\tHarga Total :", harga)
+    print(f"\t\t\tBiaya Admin : Rp{bAdmin}")
+    print(f"\t\t\tPajak       : Rp{pajak}")
+    print(f"\t\t\tHarga Total : Rp{harga}")
     print("\t\t\t\t------------------")
-    print("Bayar\t\t:",bayar)
-    print("Kembalian\t:",Kembali)
+    print(f"Bayar\t\t: Rp{bayar}")
+    print(f"Kembalian\t: Rp{Kembali}")
     print("Keterangan\t:\n",keterangan)
     print("Atas Nama\t:",nama_pembeli)
     print("")
@@ -224,18 +224,18 @@ Pilih (1/2)
     l = len(jumlah_barang)
     i = 0
     while i < l:
-        struk_txt.write("{0}\t({1})\t{2}\t{3}\n".format(barang_total[i],
+        struk_txt.write("{0}\t({1})\tRp{2}\tRp{3}\n".format(barang_total[i],
         jumlah_barang[i],
         harga_total[i],
         harga_total[i]*jumlah_barang[i]))
         i += 1
     struk_txt.write("\t\t\t\t------------------\n")
-    struk_txt.write(f"\t\t\tBiaya Admin: {bAdmin}\n")
-    struk_txt.write(f"\t\t\tPajak      : {pajak}\n")
-    struk_txt.write(f"\t\t\tHarga Total: {harga}\n")
+    struk_txt.write(f"\t\t\tBiaya Admin: Rp{bAdmin}\n")
+    struk_txt.write(f"\t\t\tPajak      : Rp{pajak}\n")
+    struk_txt.write(f"\t\t\tHarga Total: Rp{harga}\n")
     struk_txt.write("\t\t\t\t------------------\n")
-    struk_txt.write(f"Bayar\t\t: {bayar}\n")
-    struk_txt.write(f"Kembalian\t: {Kembali}\n")
+    struk_txt.write(f"Bayar\t\t: Rp{bayar}\n")
+    struk_txt.write(f"Kembalian\t: Rp{Kembali}\n")
     struk_txt.write(f"Keterangan\t:\n{keterangan}\n")
     struk_txt.write(f"Atas Nama\t: {nama_pembeli}\n")
     a = "Terima Kasih"

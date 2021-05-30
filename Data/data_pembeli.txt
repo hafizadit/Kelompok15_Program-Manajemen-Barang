@@ -8,3 +8,13 @@ Barang yang Dibeli : [['Ip X 64'], [1]]
 Keterangan : Cash
 DP : 0
 Sisa : 0
+
+Tanggal : 2021-05-30 12:59:33.886688
+Nama : Rian
+Umur : 4
+Gender : L
+Alamat : Malang
+Barang yang Dibeli : [['Ip X 64'], [1]]
+Keterangan : Cash
+DP : 0
+Sisa : 0
