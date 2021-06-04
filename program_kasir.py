@@ -268,7 +268,57 @@ Pilih (1/2)
         jsonFile.close()
 
         i += 1   
- 
+
+# Fungsi untuk mereset username dan password
+def reset():
+    print("")
+    print("="*50)
+    x = "Reset Username dan Password"
+    print(x.center(50))
+    print("="*50)
+    # Login
+    username = input("\nMasukkan Username :")
+    password = input("Masukkan Password :")
+    if username == password_py["username"] and password == password_py["password"]:
+        print("\nLogin berhasil, silakan ubah data\n")
+
+        # Open Json file
+        jsonFile = open("Data/password.json","r")
+        data = json.load(jsonFile)
+        
+        # Input username dan password baru
+        a = input("Masukkan Username Baru :")
+        b = input("Masukkan Password Baru :")
+        data["username"] = a
+        data["password"] = b
+
+        # Update Json file
+        jsonFile = open("Data/password.json","w+")
+        jsonFile.write(json.dumps(data,indent=4))
+        jsonFile.close()
+        
+        print("\nUpdate Username dan Password Berhasil!")
+        print("")
+        print("="*50)
+        txt = "Program Selesai"
+        print(txt.center(50))
+        print("="*50)
+        sys.exit()
+    else:
+        x = input("Username atau password salah, ulang atau main menu (u/m) ?")
+        if x == "u":
+            reset()
+        elif x == "m":
+            mainMenu() 
+        else:
+            print("\nInput Salah!")
+            print("")
+            print("="*50)
+            txt = "Program Selesai"
+            print(txt.center(50))
+            print("="*50)
+            sys.exit()
+            
 # Fungsi untuk menambahkan barang yang ingin dibeli
 def programHitung():
     print("")
@@ -415,8 +465,7 @@ def mainMenu():
     elif x == "2":
         menuStok()
     elif x == "3":
-        pass
-        # fungsimenu3() (belum ada)
+        reset()
     elif x == "4":
         pass
         # Import file grafik (belum ada)
