@@ -9,6 +9,9 @@ Program ini dibuat untuk menyelesaikan Tugas Besar Praktikum Programa Komputer 2
 	<summary><a href="https://github.com/hafizadit/Kelompok15_Program-Manajemen-Barang/blob/main/program_kasir.py">Berkas "program_kasir.py"</a></summary><p>Merupakan program utama python yang digunakan untuk menjalankan program</p>
 </details>
 <details>
+	<summary><a href="https://github.com/hafizadit/Kelompok15_Program-Manajemen-Barang/blob/main/grafik.py">Berkas "grafik.py"</a></summary><p>Merupakan program python yang berisikan fungsi untuk menampilkan grafik</p>
+</details>
+<details>
 	<summary><a href="https://github.com/hafizadit/Kelompok15_Program-Manajemen-Barang/blob/main/flowchart.pdf">Berkas "flowchart.pdf"</a></summary><p>Merupakan lampiran berupa diagram alir yang menjelaskan cara kerja program </p>
 </details>
 
@@ -32,7 +35,7 @@ Program ini dibuat untuk menyelesaikan Tugas Besar Praktikum Programa Komputer 2
 ## System Requirement 
 Operating System : Windows 7 or later, macOS, and Linux</br>
 Python Version : 3.6.X or later</br>
-Library : Json, Sys, , Datetime, & Matplotlib 
+Library : Json, Sys, Datetime, & Matplotlib 
 
 
 ## Penjelasan Singkat Program 
