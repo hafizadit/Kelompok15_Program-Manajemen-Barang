@@ -340,6 +340,39 @@ def programHitung():
             print("="*50)
             sys.exit()
             
+# Fungsi untuk menambahkan barang baru
+def programTambah():
+    print("")
+    print("-"*5,"Selamat Datang di Program Tambah Barang","-"*5)
+    n = int(input("Masukkan Jumlah Barang yang Akan Ditambahkan :"))
+    i = 1
+    while i <= n:
+        jsonFile = open("Data/listbarang.json","r")
+        data = json.load(jsonFile)
+        
+        temp = data["list"]
+        a = len(temp)
+        b = input("Nama Barang :")
+        c = int(input("Harga Barang :"))
+        d = int(input("Stok Barang :"))
+        y = {"ID": a,"Nama": b,"Harga": c,"Stok":d,"Jual":0}
+
+        # Update txt
+        transaksi_txt.write(f"\n{datetime.datetime.now()} Penambahan barang baru : {y}")
+        temp.append(y)
+        jsonFile = open("Data/listbarang.json","w+")
+        jsonFile.write(json.dumps(data,indent=4))
+        jsonFile.close()
+        i += 1
+    else:
+        print("\nData barang sudah ter-update!")
+        print("")
+        print("="*50)
+        txt = "Program Selesai"
+        print(txt.center(50))
+        print("="*50)
+        sys.exit()
+            
 # Fungsi menu di dalam menu stok
 def menuStok():
     print("")
