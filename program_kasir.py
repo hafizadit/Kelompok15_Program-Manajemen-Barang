@@ -467,8 +467,8 @@ def mainMenu():
     elif x == "3":
         reset()
     elif x == "4":
-        pass
-        # Import file grafik (belum ada)
+        import grafik
+        mainMenu()
     else:
         print("")
         print("="*50)
