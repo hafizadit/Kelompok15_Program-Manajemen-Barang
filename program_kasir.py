@@ -389,7 +389,45 @@ def programHitung():
             print(txt.center(50))
             print("="*50)
             sys.exit()
-            
+        
+# Fungsi untuk menambahkan stok barang yang sudah ada
+def tambahStok():
+    print("")
+    print("-"*5,"Selamat Datang di Program Tambah Stok","-"*5)
+    display()
+    print("")
+    
+    # Open Json File
+    jsonFile = open("Data/listbarang.json","r")
+    data = json.load(jsonFile)
+
+    # Input ID dan jumlah stok tambahan
+    a = int(input("Masukkan ID barang :"))
+    y = int(input("Jumlah Stok yang ditambah :"))
+
+    # Update Json file
+    temp = data["list"]
+    temp[a]["Stok"] = temp[a]["Stok"] + y
+    jsonFile = open("Data/listbarang.json","w+")
+    jsonFile.write(json.dumps(data,indent=4))
+    jsonFile.close()
+
+    # Update txt
+    transaksi_txt.write(f"\n{datetime.datetime.now()} Penambahan jumlah stok barang ID : {a}, sejumlah {y}")
+
+    # Ask for looping
+    x = input("\nIngin menambahkan lagi (y/n) ?")
+    if x == "y":
+        tambahStok()
+    else:
+        print("\nStok Sudah ter-update")
+        print("")
+        print("="*50)
+        txt = "Program Selesai"
+        print(txt.center(50))
+        print("="*50)
+        sys.exit()
+        
 # Fungsi untuk menambahkan barang baru
 def programTambah():
     print("")
