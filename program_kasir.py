@@ -340,6 +340,31 @@ def programHitung():
             print("="*50)
             sys.exit()
             
+# Fungsi menu di dalam menu stok
+def menuStok():
+    print("")
+    print("-"*10,"Selamat Datang di Menu Stok","-"*10)
+    print("\nMenu Program :")
+    print("1. Tambah Barang Baru")
+    print("2. Cek Stok")
+    print("3. Tambah Stok")
+    print("4. Kembali ke Main Menu\n")
+    x = input("Pilih menu :")
+    if x == "1":
+        programTambah()
+    elif x == "2":
+        display()
+        x = input("Tekan enter untuk kembali ke main menu :")
+        if x == "":
+            mainMenu()
+    elif x == "3":
+        tambahStok()
+        x = input("Tekan enter untuk kembali ke main menu :")
+        if x == "":
+            mainMenu()
+    elif x == "4":
+        mainMenu()
+        
 # Fungsi main menu
 def mainMenu():
     # Menampilkan main menu
@@ -355,8 +380,7 @@ def mainMenu():
     if x == "1":
         programHitung()
     elif x == "2":
-        pass
-        # fungsimenu2() (belum ada)
+        menuStok()
     elif x == "3":
         pass
         # fungsimenu3() (belum ada)
