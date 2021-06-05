@@ -14,7 +14,9 @@ Program ini dibuat untuk menyelesaikan Tugas Besar Praktikum Programa Komputer 2
 <details>
 	<summary><a href="https://github.com/hafizadit/Kelompok15_Program-Manajemen-Barang/blob/main/flowchart.pdf">Berkas "flowchart.pdf"</a></summary><p>Merupakan lampiran berupa diagram alir yang menjelaskan cara kerja program </p>
 </details>
-
+<details>
+	<summary><a href="https://github.com/hafizadit/Kelompok15_Program-Manajemen-Barang/blob/main/Laporan_Tahap%201.pdf">Berkas "Laporan_Tahap 1.pdf"</a></summary><p>Merupakan lampiran berupa laporan dari tahap 1 mengenai latar belakang dan visi mengenai program yang dikerjakan</p>
+</details>
 <details>
 	<summary><a href="https://github.com/hafizadit/Kelompok15_Program-Manajemen-Barang/tree/main/Data">Folder Data</a></summary><p>Folder yang berguna untuk menyimpan data-data mengenai stok dan transaksi. Folder ini berisi 4 item, sebagai berikut</br>
 	1. <b>Berkas "data_pembeli.txt"</b>. Merupakan file yang akan menyimpan data pembeli jika terdapat transaksi berhasil.</br>
