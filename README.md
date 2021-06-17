@@ -15,6 +15,9 @@ Program ini dibuat untuk menyelesaikan Tugas Besar Praktikum Programa Komputer 2
 	<summary><a href="https://github.com/hafizadit/Kelompok15_Program-Manajemen-Barang/blob/main/flowchart.pdf">Berkas "flowchart.pdf"</a></summary><p>Merupakan lampiran berupa diagram alir yang menjelaskan cara kerja program </p>
 </details>
 <details>
+	<summary><a href="https://github.com/hafizadit/Kelompok15_Program-Manajemen-Barang/blob/main/PPT.pdf">Berkas "PPT.pdf"</a></summary><p>Merupakan lampiran yang berisikan materi presentasi</p>
+</details>
+<details>
 	<summary><a href="https://github.com/hafizadit/Kelompok15_Program-Manajemen-Barang/blob/main/Laporan_Tahap%201.pdf">Berkas "Laporan_Tahap 1.pdf"</a></summary><p>Merupakan lampiran berupa laporan dari tahap 1 mengenai latar belakang dan visi mengenai program yang dikerjakan</p>
 </details>
 <details>
